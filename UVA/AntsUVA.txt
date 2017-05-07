@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cstdio>
+#include<algorithm>
+using namespace std;
+int main()
+{
+    int ant,len,A,B,T,pos,i,j;
+    cin>>T;
+    for(i=0;i<T;i++)
+    {
+        cin>>len>>ant;
+        A=0;
+        B=0;
+        for(j=0;j<ant;j++)
+        {
+            cin>>pos;
+            A= max(A,min(len-pos,pos));
+            B= max(B,max(len-pos,pos));
+        }
+        cout<<A<<" "<<B<<endl;
+    }
+}
